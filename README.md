@@ -10,7 +10,7 @@
 <ul>
   <li> A RaspberryPi</li>
   <li> A computer with an SD card reader </li>
-  <li> An microSD card and microSD adapter </li>
+  <li> An microSD card ( 8GB, class 6 ) is recommended.  *The class refers to the read/write speed of the card. </li>
   <li> USB cable </li>
   <li> A screen with an HDMI port</li>
   <li> An HDMI cable </li>
