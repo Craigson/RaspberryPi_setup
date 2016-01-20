@@ -76,7 +76,7 @@ If it still doesn't work, consult the [Troubleshooting guide](https://www.raspbe
 <pre>pi</pre>
 <p>followed by the default password:</p>
 <pre>raspberry</pre>
-<>Setting up a new user is recommended and more secure, but not necessary, so feel free to skip to Step 3 if you're happy with the defaults provided.</p>
+<p>Setting up a new user is recommended and more secure, but not necessary, so feel free to skip to Step 3 if you're happy with the defaults provided.</p>
 <p>To create new user, type the following command (replacing the name in bold with the name you choose).</p>
 <pre>sudo adduser <b>craig</b></pre>
 <p>you'll be prompted to enter a password of your choosing. Once selecting your password you'll be prompted to fill in the user's details such as name, number etc.. feel free to leave those blank by just hitting Enter.</p>
@@ -152,9 +152,11 @@ round-trip min/avg/max/stddev = 0.291/0.389/0.542/0.074 ms
 <p><i>Secure Shell</i> (SSH)is a command interface and protocol for securely getting access to a remote computer.  We'll be using SSH to transfer files and access the Pi remotely. This means that you can now access the Pi without needing a screen or keyboard.</p>
 <p>To SSH into your Pi, type the following command:</p>
 <pre>
-sudo ssh <b>your_pi_username</b>@<b>your_pi_IPaddress</b></pre>
+sudo ssh <b>your_pi_username</b>@<b>your_pi_IPaddress</b>
 eg. sudo ssh craig@192.168.0.10
 </pre>
+<p>If asked about RSA key authentication, simply type 'yes'</p>
+
 
 
 ---
