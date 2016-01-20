@@ -57,6 +57,6 @@ https://www.raspberrypi.org/downloads/raspbian/
 <li>Now we're going to copy the disk image to the SD card. In terminal, navigate to your desktop folder (you can do this by typing <pre>cd </pre> followed by a space, then drag the desktop folder from your finder window into terminal. You'll see the command line populate with your desktop folder's path. Press Enter.</li>
 <li>Type in <pre>ls -l</pre> and hit Enter.  You should see a list of all the files and folders on your desktop.  Scroll up and copy the name of your disk OS disk image by highlighting it with your cursor and using the keyboard shortcut cmd+C </li>
 <li>Now type in the following command (remember to replace the img name, and the disk name, that are found between the quotation marks with the names of your own, and to exclude the quotation marks):
-<pre>sudo dd bs=1m if='2015-11-21-raspbian-jessie-lite.img' of=/dev/r'disk4'</pre>
+<pre>sudo dd bs=1m if='<b>2015-11-21-raspbian-jessie-lite.img</b>' of=/dev/r'disk4'</pre>
 <li>Hit Enter. And you should be prompted to enter your password. If it was successful, the cursor will just be flashing on a blank line.  You can check that there is copying taking place by hitting the Ctrl+T keyboard shortcut.</li>
 </ul>
