@@ -86,7 +86,7 @@ If it still doesn't work, consult the [Troubleshooting guide](https://www.raspbe
 <p>This will open the <b>/etc/sudoers</b> file.  Search for the line that says:</p>
 <pre>root  ALL=(ALL:ALL) ALL</pre>
 <p>and add the following line under it (remembering to substitute your own username for the one in bold)</p>
-<pre>craig  ALL=(ALL:ALL) ALL</pre>
+<pre><b>craig</b>  ALL=(ALL:ALL) ALL</pre>
 <p>To exit the document, use the keyboard shortcut Ctrl+X, then hit 'Y', then hit Enter. </p>
 <p>To switch to your user, type the following command (substituting in your own username):</p>
 <pre>su <b>craig</b></pre>
