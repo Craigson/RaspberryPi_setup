@@ -44,11 +44,19 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
 https://www.raspberrypi.org/downloads/raspbian/  
 
 <p>Now we're going to be be writing the disk image, that you've just downloaded, onto the microSD card using the command line.</p>
-
-*Extract the raspbian-jessie-lite.zip file.
-*Drag the raspbian-jessie-lite.dmg file into/onto your desktop.
-*Open up Terminal.  With the SD card still inserted in your laptop/computer, type the following command into your terminal window:
+<ul>
+<li>Extract the raspbian-jessie-lite.zip file.</li>
+<li>Drag the raspbian-jessie-lite.dmg file into/onto your desktop.</li>
+<li>Open up Terminal.  With the SD card still inserted in your laptop/computer, type the following command into your terminal window:</li>
   <pre>diskutil list</pre>
-*You should see something like this:
-[!Terminal](images/terminal.jpg)
-*The easiest way to identify which disk is your SD card is to look for the name you gave it during formatting. You should also recognise it based on its size ( mine's a 16GB card ).
+<li>You should see something like this:</li>
+![Terminal](images/terminal.jpg)
+<li>The easiest way to identify which disk is your SD card is to look for the name you gave it during formatting. You should also recognise it based on its size ( mine's a 16GB card ).</li>
+<li>You can see clearly that mine is **/dev/disk2**.</li>
+<li>unmount you card by typing the following command: <pre>diskutil unmountDisk /dev/disk2</pre> (you'll be substituting *disk2* for whatever you identified your SD card to be). </li>
+<li>Now we're going to copy the disk image to the SD card. In terminal, navigate to your desktop folder (you can do this by typing <pre>cd </pre> followed by a space, then drag the desktop folder from your finder window into terminal. You'll see the command line populate with your desktop folder's path. Press Enter.</li>
+<li>Type in <pre>ls -l</pre> and hit Enter.  You should see a list of all the files and folders on your desktop.  Scroll up and copy the name of your disk OS disk image by highlighting it with your cursor and using the keyboard shortcut cmd+C </li>
+<li>Now type in the following command (remember to replace the img name, and the disk name, that are found between the quotation marks with the names of your own, and to exclude the quotation marks):
+<pre>sudo dd bs=1m if='2015-11-21-raspbian-jessie-lite.img' of=/dev/r'disk4'</pre>
+<li>Hit Enter. And you should be prompted to enter your password. If it was successful, the cursor will just be flashing on a blank line.  You can check that there is copying taking place by hitting the Ctrl+T keyboard shortcut.</li>
+</ul>
