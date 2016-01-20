@@ -19,7 +19,7 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
   <li> A RaspberryPi</li>
   <li> A computer with an SD card reader </li>
   <li> An microSD card ( 8GB, class 6 ) is recommended.  *The class refers to the read/write speed of the card. </li>
-  <li> USB cable </li>
+  <li> USB cable (check your pi for the size) </li>
   <li> A screen with an HDMI port</li>
   <li> An HDMI cable </li>
   <li> A USB keyboard </li>
@@ -29,7 +29,7 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
 
 ---  
 
-<h5>Step 1: Installing the OS</h5>
+<h5>Step 1: Downloading and installing the OS</h5>
 <p>Your Pi is small computer, and all computers need an operating system (OS) to be of any use, so let's install one. The first thing you need to do is format the SD card.</p>
 <ul>
 <li>Download the SD Association's Formatting Tool from https://www.sdcard.org/downloads/formatter_4/eula_mac/ </li>
@@ -59,10 +59,20 @@ https://www.raspberrypi.org/downloads/raspbian/
 <li>Now type in the following command (remember to replace the img name, and the disk name, that are in bold with those of your own image and disk):
 <pre>sudo dd bs=1m if=<b>2015-11-21-raspbian-jessie-lite.img</b> of=/dev/r<b>disk4</b></pre>
 <li>Hit Enter. And you should be prompted to enter your password. If it was successful, the cursor will just be flashing on a blank line.  You can check that there is copying taking place by hitting the Ctrl+T keyboard shortcut.</li>
-<li>Eject the disk (Using Disk Utility or in Finder) and place it in your RaspberryPi.<li>
+<li>Eject the disk (Using Disk Utility or in Finder) and place it in your RaspberryPi.</li>
 </ul>
 
 <b>Troubleshooting:</b>
 <p>If you encounter the error: <pre>dd: invalid number '1m'</pre>
 <p>try replacing the '1m' in the previous command with '1M' <pre>sudo dd bs=<b>1M</b> if=2015-11-21-raspbian-jessie-lite.img of=/dev/rdisk4</pre> (remembering to subsitute the img name and disk for your own).</p>
 If it still doesn't work, consult the [Troubleshooting guide](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
+
+---
+
+<h5>Step 2: Setting up a new user</h5>
+<p>Plug in your USB keyboard, mouse, and HDMI cable before powering up your Pi with the USB cable.</p>
+<p>Once the boot sequence has completed, you'll be asked to login. Enter the default username:</p>
+<pre>pi</pre>
+<p>followed by the default password:</p>
+<pre>raspberry</pre>
+
