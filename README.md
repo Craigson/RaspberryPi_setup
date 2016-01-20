@@ -107,10 +107,12 @@ static domain_name_servers=192.168.0.1
 <p>Plug the ethernet cable into your laptop and the Pi.</pi>
 <p>Now we need to reboot the network interface.  Do this using the following command:</p>
 <pre>sudo ifdown eth0 && sudo ifup eth0</pre>
-To check that everything is working, type the following command:
+<p>To check that everything is working, type the following command:</p>
 <pre>ifconfig</pre>
-Your results should look something like this:
+<p>Your results should look something like this:</p>
 ![ifconfig](images/ifconfig.jpg)  
-The important things to notice are <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.  
-Go to your System Preferences > Network  
+<p>The important things to notice are <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.</p>  
+<p>Go to your System Preferences > Network</p>
+<p>You'll want to locate your ethernet port, or the adapter port, from the list provided.  In the dropdown menu next to 'Configure IPv4' select <b>manually</b>
+
 
