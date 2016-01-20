@@ -112,4 +112,5 @@ To check that everything is working, type the following command:
 Your results should look something like this:
 ![ifconfig](images/ifconfig.jpg)
 The important things to notice are <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.
+Go to your System Preferences > Network
 
