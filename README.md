@@ -92,7 +92,7 @@ If it still doesn't work, consult the [Troubleshooting guide](https://www.raspbe
 
 ---
 
-<h5>Step 3: Connecting to your Pi</h5>
+<h5>Step 3: Setting up the Pi's network interface</h5>
 <p>We'll be connecting directly to the Pi using an Ethernet cable.  To do this, we need to set a static IP on the eth0 port.  We do this by editing the dhcp config file.  To open the file, type in the following command:</p>
 <pre>sudo nano /etc/dhcpcd.conf</pre>
 <p>'nano' is simply the default text editor, so the above command is saying that we want to open the interfaces file using the nano text editor.</p>
@@ -118,7 +118,25 @@ static domain_name_servers=192.168.0.1
 ![IP settings](images/ip_settings.jpg)
 <p>Click <i>Apply</i> and open up Terminal again.</p>
 <p>To test that the connection is working, type in the following (provided you set your Pi's IP address to the same as mine):<p>
-<pre>ping 192.168.0.10<pre>
+<pre>ping 192.168.0.10</pre>
 <p>If the connection has succesfully been established, you should see results like this:</p>
 ![ping](images/ping.jpg)
+
+---
+
+<h5>Step 4: Connecting to your Pi</h5>
+<p>From this point onwards, you no longer need a screen and keyboard to access your Pi.</p>
+<p><i>Secure Shell</i> (SSH)is a command interface and protocol for securely getting access to a remote computer.  We'll be using SSH to transfer files and access the Pi remotely. This means that you can now access the Pi without needing a screen or keyboard.</p>
+<p>To SSH into your Pi, type the following command:</p>
+
+
+---
+
+<h5>Some useful commandline commands for the Pi</h5>
+<p>Shutdown your Pi:</p>
+<pre>sudo shutdown now</pre>
+<p>Restart your Pi:</p>
+<pre>sudo shutdown -r now</pre>
+<p>Stop any and all scripts running in the background</p>
+<pre>sudo killall</pre>
 
