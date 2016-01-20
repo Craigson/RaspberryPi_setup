@@ -111,8 +111,14 @@ static domain_name_servers=192.168.0.1
 <pre>ifconfig</pre>
 <p>Your results should look something like this:</p>
 ![ifconfig](images/ifconfig.jpg)  
-<p>The important things to notice are <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.</p>  
+<p>Take note of the <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.</p>  
 <p>Go to your System Preferences > Network</p>
 <p>You'll want to locate your ethernet port, or the adapter port, from the list provided.  In the dropdown menu next to 'Configure IPv4' select <b>manually</b>
-
+<p>Fill in the fields according to the image below, ensuring that the subnet mask is the same ifconfig's Mask on your Pi.  The IP address should be the same as your Pi, except for the last digit which can be anything between 0-99, as long as it is not the same as your Pi's or the Router.</p>
+![IP settings](images/ip_settings.jpg)
+<p>Click <i>Apply</i> and open up Terminal again.</p>
+<p>To test that the connection is working, type in the following (provided you set your Pi's IP address to the same as mine):<p>
+<pre>ping 192.168.0.10<pre>
+<p>If the connection has succesfully been established, you should see results like this:</p>
+![ping](images/ping.jpg)
 
