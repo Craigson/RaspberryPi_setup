@@ -64,4 +64,4 @@ https://www.raspberrypi.org/downloads/raspbian/
 <b>Troubleshooting:</b>
 <p>If you encounter the error: <pre>dd: invalid number '1m'</pre>
 <p>try replacing the '1m' in the previous command with '1M' <pre>sudo dd bs=<b>1M</b> if=2015-11-21-raspbian-jessie-lite.img of=/dev/rdisk4</pre> (remembering to subsitute the img name and disk for your own).</p>
-<p>If it still doesn't work, consult the ![Troubleshooting guide](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)</p>
+If it still doesn't work, consult the [Troubleshooting guide](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
