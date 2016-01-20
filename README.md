@@ -38,3 +38,13 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
 <li>Check that the SD card you inserted matches the one selected by the Tool</li>
 <li>Click the "Format" button (Be patient, this can take a while if you have a large card).</li>
 </ul>
+
+<p>We're going to be installing the RASPBIAN JESSIE LITE (this is the command line only operating system).  Feel free to install any of the other OSs, but this guide will be covering the JESSIE LITE only.</p>
+https://www.raspberrypi.org/downloads/raspbian/  
+
+<p>Now we're going to be be writing the disk image, that you've just downloaded, onto the microSD card using the command line.</p>
+<ul>
+  <li>Extract the raspbian-jessie-lite.zip file.</li>
+  <li>Drag the raspbian-jessie-lite.dmg file into/onto your desktop.</p>
+  <li>Open up Terminal.  With the SD card still inserted in your laptop/computer, type the following command into your terminal window:</li>
+  <pre>diskutil list</pre>
