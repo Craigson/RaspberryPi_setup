@@ -151,8 +151,10 @@ round-trip min/avg/max/stddev = 0.291/0.389/0.542/0.074 ms
 <p>From this point onwards, you no longer need a screen and keyboard to access your Pi.</p>
 <p><i>Secure Shell</i> (SSH)is a command interface and protocol for securely getting access to a remote computer.  We'll be using SSH to transfer files and access the Pi remotely. This means that you can now access the Pi without needing a screen or keyboard.</p>
 <p>To SSH into your Pi, type the following command:</p>
-<pre>sudo ssh your_pi_username@your_pi_IPaddress</pre>
-<pre>eg. sudo ssh craig@192.168.0.10</pre>
+<pre>
+sudo ssh <b>your_pi_username</b>@<b>your_pi_IPaddress</b></pre>
+eg. sudo ssh craig@192.168.0.10
+</pre>
 
 
 ---
