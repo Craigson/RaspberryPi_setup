@@ -5,7 +5,7 @@
 ---
 
 <h4>A step-by-step guide to setting up your Pi</h4>
-<p>This guide focuses on the Pi Models 1 & 2, not the Zero, and is an extensions of Surya Mattu's 2015 Unconference session ( which can be found here: https://github.com/samatt/RasberryPiSetup ).</p>
+<p>This guide focuses on the Pi Models 1 & 2, not the Zero, and is an extension of Surya Mattu's 2015 Unconference session ( which can be found here: https://github.com/samatt/RasberryPiSetup ).</p>
 <p> As per Surya's repo, you can find a concise explanation of the difference between a Pi and Arduino:  </p>
 https://blog.adafruit.com/2012/06/18/ask-an-educator-whats-the-difference-between-arduino-raspberry-pi-beagleboard-etc  
 
