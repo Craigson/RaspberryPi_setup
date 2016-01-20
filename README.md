@@ -23,8 +23,8 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
   <li> A screen with an HDMI port</li>
   <li> An HDMI cable </li>
   <li> A USB keyboard </li>
-  <li> A USB mouse </li>
   <li> An ethernet cable </li>
+  <li> An ethernet adapter if you don't have an ethernet port </li>
 </ul>
 
 ---  
@@ -70,9 +70,38 @@ If it still doesn't work, consult the [Troubleshooting guide](https://www.raspbe
 ---
 
 <h5>Step 2: Setting up a new user</h5>
-<p>Plug in your USB keyboard, mouse, and HDMI cable before powering up your Pi with the USB cable.</p>
+<p>Plug in your USB keyboard and HDMI cable before powering up your Pi with the USB cable.</p>
 <p>Once the boot sequence has completed, you'll be asked to login. Enter the default username:</p>
 <pre>pi</pre>
 <p>followed by the default password:</p>
 <pre>raspberry</pre>
+<>Setting up a new user is recommended and more secure, but not necessary, so feel free to skip to Step 3 if you're happy with the defaults provided.</p>
+<p>To create new user, type the following command (replacing the name in bold with the name you choose).</p>
+<pre>sudo adduser <b>craig</b></pre>
+<p>you'll be prompted to enter a password of your choosing. Once selecting your password you'll be prompted to fill in the user's details such as name, number etc.. feel free to leave those blank by just hitting Enter.</p>
+<p>Before switching to your new user, we need to five it sudo privilages. The default pi user on Raspbian is a sudoer. This gives the ability to run commands as root when preceded by sudo, and to switch to the root user with sudo su.</p>
+<p>To give your new user sudo privilages, type the following command:</p?
+<pre>sudo visudo</pre>
+<p>This will open the <b>/etc/sudoers</b> file.  Search for the line that says:</p>
+<pre>root  ALL=(ALL:ALL) ALL</pre>
+<p>and add the following line under it (remembering to substitute your own username for the one in bold)</p>
+<pre>craig  ALL=(ALL:ALL) ALL</pre>
+<p>To exit the document, use the keyboard shortcut Ctrl+X, then hit 'Y', then hit Enter. </p>
+<p>To switch to your user, type the following command (substituting in your own username):</p>
+<pre>su <b>craig</b><pre>
+
+---
+
+<h5>Step 3: Connecting to your Pi</h5>
+<p>We'll be connecting directly to the Pi using an Ethernet cable.  To do this, we need to set a static IP on the eth0 port.  We do this by editing the dhcp config file.  To open the file, type in the following command:</p>
+<pre>sudo nano /etc/dhcpcd.conf</pre>
+<p>'nano' is simply the default text editor, so the above command is saying that we want to open the interfaces file using the nano text editor.</p>
+<p>Add the following lines to the bottom of the document:</p>
+<pre>
+interface eth0
+static ip_address=192.168.0.10
+static routers=192.168.0.1
+static domain_name_servers=192.168.0.1
+</pre>
+<p>To save the document, use the keyboard shortcut Cmd+X, followed by 'y', followed by enter.</p>
 
