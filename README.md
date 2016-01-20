@@ -88,7 +88,7 @@ If it still doesn't work, consult the [Troubleshooting guide](https://www.raspbe
 <pre>craig  ALL=(ALL:ALL) ALL</pre>
 <p>To exit the document, use the keyboard shortcut Ctrl+X, then hit 'Y', then hit Enter. </p>
 <p>To switch to your user, type the following command (substituting in your own username):</p>
-<pre>su <b>craig</b><pre>
+<pre>su <b>craig</b></pre>
 
 ---
 
