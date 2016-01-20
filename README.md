@@ -110,7 +110,16 @@ static domain_name_servers=192.168.0.1
 <p>To check that everything is working, type the following command:</p>
 <pre>ifconfig</pre>
 <p>Your results should look something like this:</p>
-![ifconfig](images/ifconfig.jpg)  
+<pre>
+eth0      Link encap:Ethernet  HWaddr b8:27:eb:cb:6f:43  
+          inet addr:192.168.0.10  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::6e9b:57b0:2d93:2c09/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:330 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:282 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:45307 (44.2 KiB)  TX bytes:37909 (37.0 KiB)
+</pre>
 <p>Take note of the <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.</p>  
 <p>Go to your System Preferences > Network</p>
 <p>You'll want to locate your ethernet port, or the adapter port, from the list provided.  In the dropdown menu next to 'Configure IPv4' select <b>manually</b>
@@ -119,8 +128,21 @@ static domain_name_servers=192.168.0.1
 <p>Click <i>Apply</i> and open up Terminal again.</p>
 <p>To test that the connection is working, type in the following (provided you set your Pi's IP address to the same as mine):<p>
 <pre>ping 192.168.0.10</pre>
-<p>If the connection has succesfully been established, you should see results like this:</p>
-![ping](images/ping.jpg)
+<p>If the connection has succesfully been established, you should see results like this (use the keyboard shortcut Ctrl+C to stop pinging your Pi):</p>
+<pre>
+172-16-216-16:~ Craig$ ping 192.168.0.10
+PING 192.168.0.10 (192.168.0.10): 56 data bytes
+64 bytes from 192.168.0.10: icmp_seq=0 ttl=64 time=0.542 ms
+64 bytes from 192.168.0.10: icmp_seq=1 ttl=64 time=0.339 ms
+64 bytes from 192.168.0.10: icmp_seq=2 ttl=64 time=0.384 ms
+64 bytes from 192.168.0.10: icmp_seq=3 ttl=64 time=0.409 ms
+64 bytes from 192.168.0.10: icmp_seq=4 ttl=64 time=0.409 ms
+64 bytes from 192.168.0.10: icmp_seq=5 ttl=64 time=0.350 ms
+64 bytes from 192.168.0.10: icmp_seq=6 ttl=64 time=0.291 ms
+--- 192.168.0.10 ping statistics ---
+7 packets transmitted, 7 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.291/0.389/0.542/0.074 ms
+</pre>
 
 ---
 
@@ -128,6 +150,8 @@ static domain_name_servers=192.168.0.1
 <p>From this point onwards, you no longer need a screen and keyboard to access your Pi.</p>
 <p><i>Secure Shell</i> (SSH)is a command interface and protocol for securely getting access to a remote computer.  We'll be using SSH to transfer files and access the Pi remotely. This means that you can now access the Pi without needing a screen or keyboard.</p>
 <p>To SSH into your Pi, type the following command:</p>
+<pre>sudo ssh your_pi_username@your_pi_IPaddress</pre>
+<pre>eg. sudo ssh craig@192.168.0.10</pre>
 
 
 ---
