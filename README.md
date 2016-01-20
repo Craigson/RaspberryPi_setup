@@ -20,4 +20,11 @@
 </ul>
 
 <h5>Step 1: Installing the OS</h5>
-<p>Your Pi is small computer, and all computers need an operating system (OS).
+<p>Your Pi is small computer, and all computers need an operating system (OS) to be of any use, so let's install one. The first thing you need to do is format the SD card.</p>
+<ul>
+<li>Download the SD Association's Formatting Tool from https://www.sdcard.org/downloads/formatter_4/eula_mac/ </li>
+<li>Install and run the Formatting Tool on your machine</li>
+<li>Select "Overwrite Format"</li>
+<li>Check that the SD card you inserted matches the one selected by the Tool</li>
+<li>Click the "Format" button</li>
+</ul>
