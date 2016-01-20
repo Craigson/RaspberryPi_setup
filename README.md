@@ -26,5 +26,5 @@
 <li>Install and run the Formatting Tool on your machine</li>
 <li>Select "Overwrite Format"</li>
 <li>Check that the SD card you inserted matches the one selected by the Tool</li>
-<li>Click the "Format" button</li>
+<li>Click the "Format" button (Be patient, this can take a while if you have a large card).</li>
 </ul>
