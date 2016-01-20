@@ -59,6 +59,7 @@ https://www.raspberrypi.org/downloads/raspbian/
 <li>Now type in the following command (remember to replace the img name, and the disk name, that are in bold with those of your own image and disk):
 <pre>sudo dd bs=1m if=<b>2015-11-21-raspbian-jessie-lite.img</b> of=/dev/r<b>disk4</b></pre>
 <li>Hit Enter. And you should be prompted to enter your password. If it was successful, the cursor will just be flashing on a blank line.  You can check that there is copying taking place by hitting the Ctrl+T keyboard shortcut.</li>
+<li>Eject the disk (Using Disk Utility or in Finder) and place it in your RaspberryPi.<li>
 </ul>
 
 <b>Troubleshooting:</b>
