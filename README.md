@@ -35,6 +35,7 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
 <li>Download the SD Association's Formatting Tool from https://www.sdcard.org/downloads/formatter_4/eula_mac/ </li>
 <li>Install and run the Formatting Tool on your machine</li>
 <li>Select "Overwrite Format"</li>
+<li>Give the disk a name that'll be easy to identify ( I just called mine 'Pi' ).</li>
 <li>Check that the SD card you inserted matches the one selected by the Tool</li>
 <li>Click the "Format" button (Be patient, this can take a while if you have a large card).</li>
 </ul>
@@ -43,8 +44,11 @@ https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md
 https://www.raspberrypi.org/downloads/raspbian/  
 
 <p>Now we're going to be be writing the disk image, that you've just downloaded, onto the microSD card using the command line.</p>
-<ul>
-  <li>Extract the raspbian-jessie-lite.zip file.</li>
-  <li>Drag the raspbian-jessie-lite.dmg file into/onto your desktop.</p>
-  <li>Open up Terminal.  With the SD card still inserted in your laptop/computer, type the following command into your terminal window:</li>
+
+*Extract the raspbian-jessie-lite.zip file.
+*Drag the raspbian-jessie-lite.dmg file into/onto your desktop.
+*Open up Terminal.  With the SD card still inserted in your laptop/computer, type the following command into your terminal window:
   <pre>diskutil list</pre>
+*You should see something like this:
+[!Terminal](images/terminal.jpg)
+*The easiest way to identify which disk is your SD card is to look for the name you gave it during formatting. You should also recognise it based on its size ( mine's a 16GB card ).
