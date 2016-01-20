@@ -104,4 +104,12 @@ static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 </pre>
 <p>To save the document, use the keyboard shortcut Cmd+X, followed by 'y', followed by enter.</p>
+<p>Plug the ethernet cable into your laptop and the Pi.</pi>
+<p>Now we need to reboot the network interface.  Do this using the following command:</p>
+<pre>sudo ifdown eth0 && sudo ifup eth0</pre>
+To check that everything is working, type the following command:
+<pre>ifconfig</pre>
+Your results should look something like this:
+![ifconfig](images/ifconfig.jpg)
+The important things to notice are <b>inet addr</b> and <b>Mask</b>, we'll be using these to set the network interface for your laptop.
 
