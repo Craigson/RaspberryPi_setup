@@ -60,3 +60,7 @@ https://www.raspberrypi.org/downloads/raspbian/
 <pre>sudo dd bs=1m if=<b>2015-11-21-raspbian-jessie-lite.img</b> of=/dev/r<b>disk4</b></pre>
 <li>Hit Enter. And you should be prompted to enter your password. If it was successful, the cursor will just be flashing on a blank line.  You can check that there is copying taking place by hitting the Ctrl+T keyboard shortcut.</li>
 </ul>
+
+<b>Troubleshooting:</b>
+<p>If you encounter the error: <pre>dd: invalid number '1m'</pre>
+<p>try replacing the '1m' in <pre>sudo dd bs=1m if=<b>2015-11-21-raspbian-jessie-lite.img</b> of=/dev/rdisk4</pre> with <b>1M</b> (remembering to subsitute the img name and disk for your own).</p>
