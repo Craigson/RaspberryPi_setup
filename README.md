@@ -13,11 +13,12 @@ https://blog.adafruit.com/2012/06/18/ask-an-educator-whats-the-difference-betwee
 https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md  
 
 ---
+<b>It's important to note that his setup guide is for the JESSIE LITE raspbian distribution.  The instructions for connecting to the Pi remotely are for Mac OSX only.</b>
 
 <h5>What you'll need:</h5>
 <ul>
   <li> A RaspberryPi</li>
-  <li> A computer with an SD card reader </li>
+  <li> A laptop/computer with an SD card reader </li>
   <li> An microSD card ( 8GB, class 6 ) is recommended.  *The class refers to the read/write speed of the card. </li>
   <li> USB cable (check your pi for the size) </li>
   <li> A screen with an HDMI port</li>
