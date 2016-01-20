@@ -96,7 +96,7 @@ If it still doesn't work, consult the [Troubleshooting guide](https://www.raspbe
 <h5>Step 3: Setting up the Pi's network interface</h5>
 <p>We'll be connecting directly to the Pi using an Ethernet cable.  To do this, we need to set a static IP on the eth0 port.  We do this by editing the dhcp config file.  To open the file, type in the following command:</p>
 <pre>sudo nano /etc/dhcpcd.conf</pre>
-<p>'nano' is simply the default text editor, so the above command is saying that we want to open the interfaces file using the nano text editor.</p>
+<p>'nano' is simply the default text editor, so the above command is saying that we want to open the config file using the nano text editor.</p>
 <p>Add the following lines to the bottom of the document:</p>
 <pre>
 interface eth0
@@ -104,7 +104,7 @@ static ip_address=192.168.0.10
 static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 </pre>
-<p>To save the document, use the keyboard shortcut Cmd+X, followed by 'y', followed by enter.</p>
+<p>To save the document, use the keyboard shortcut Ctrl+X, followed by 'y', followed by enter.</p>
 <p>Plug the ethernet cable into your laptop and the Pi.</pi>
 <p>Now we need to reboot the network interface.  Do this using the following command:</p>
 <pre>sudo ifdown eth0 && sudo ifup eth0</pre>
