@@ -12,8 +12,11 @@ https://blog.adafruit.com/2012/06/18/ask-an-educator-whats-the-difference-betwee
 </p>Raspberry Pi's website explains the differences between the different models:  </p>
 https://www.raspberrypi.org/documentation/hardware/raspberrypi/models/README.md  
 
+<b>It's important to note that his setup guide is for the JESSIE LITE raspbian distribution.  The instructions for connecting to the Pi remotely are for Mac OSX only.</b>  
+<nbr>
+If you want to set up your Pi for an application that requires a screen and has a desktop operating system, you can download the easy-to-use [NOOBS OS Installer](https://www.raspberrypi.org/downloads/noobs/).  You can follow <b>Step 1</b> to copy the image to your SD card.
+
 ---
-<b>It's important to note that his setup guide is for the JESSIE LITE raspbian distribution.  The instructions for connecting to the Pi remotely are for Mac OSX only.</b>
 
 <h5>What you'll need:</h5>
 <ul>
