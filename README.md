@@ -156,12 +156,93 @@ sudo ssh <b>your_pi_username</b>@<b>your_pi_IPaddress</b>
 eg. sudo ssh craig@192.168.0.10
 </pre>
 <p>If asked about RSA key authentication, simply type 'yes'</p>
+<p>You should now be logged into you Pi.</p>
+<p>Let's test the connection by copying across a file using SCP (secure copy protocol).</p>
+<p>Open up a new terminal window, you can create a new tab in your existing terminal using Cmd+T (keep the terminal window that you SSH'd into you Pi open).</p>
+<p>Create a new file that you'll be copying over.  To create a test text file, type the following command:</p>
+<pre>echo this is some sample text >> test.txt</pre>
+<p>This should have created a text file called <i>test.txt</i> in your present working directory. To check if it's there, type the following command:</p>
+<pre>ls -l</pre>
+<p>You should see the test.txt file in the list of files, like the one below:</p>
+<pre>
+172-16-216-16:Desktop Craig$ ls -l
+total 3389224
+-rw-r--r--@  1 Craig  staff  1458569216 Nov 21 21:32 2015-11-21-raspbian-jessie-lite.img
+-rw-r-----@  1 Craig  staff       13712 Jan  9 14:29 CXvbW1lWcAAl5z_.jpg
+-rw-r--r--   1 Craig  staff   276026159 Dec  9 17:59 Craig.zip
+-rw-r-----@  1 Craig  staff       22689 Jan  2 23:31 Twitter_logo_blue.png
+drwxr-xr-x   3 Craig  staff         102 Apr 25  2015 basic_depth
+-rw-r-----@  1 Craig  staff        6129 Dec 14 12:12 castle.png
+drwxr-xr-x  32 Craig  staff        1088 Dec 15 00:12 demo
+-rw-r--r--@  1 Craig  staff       74334 Dec  7 16:24 schematic.png
+<b>-rw-r--r--   1 Craig  staff          20 Jan 22 11:51 test.txt</b>
+-rw-r--r--   1 Craig  staff      430629 Jan  2 21:03 three.min.js
+-rw-r-----@  1 Craig  staff       91807 Jan  6 16:52 tumblr_nuzyppVxQN1uqyj3lo1_1280.png
+-rw-------   1 Craig  staff       22130 Nov 16 19:31 widget-com.apple.widget.stickies.plist
+172-16-216-16:Desktop Craig$ 
+</pre>
+<p>You need to know the path of where you want to copy your file to, switch tabs back to the window that's logged into your Pi and type:</p>
+<pre>pwd</pre>
+<p>This will give you the present working directory for your Pi, which'll look something like this:</p>
+<pre>
+craig@raspberrypi:~ $ pwd
+/home/craig
+</pre>
+<p>Switch back to the window and repeat the previous step.  My path looks like this:</p>
+<pre>
+Craigs-MacBook-Pro:Desktop Craig$ pwd
+/Users/Craig/Desktop
+</pre>
+<p>Now that we have both the source and destination paths, we can perform the copy.  To perform the copy, type the following command (substituting my file paths for your own): </p>
+<pre>
+<b>scp /path/to/file username@a:/path/to/destination</b>
+eg. scp /Users/Craig/Desktop/test.txt craig@192.168.0.10:/home/craig
+</pre>
+<p>Enter the password for your Pi's username when prompted to do so! If the copy is successful, you'll see a message like this in the console: </p>
+<pre>
+Craigs-MacBook-Pro:Desktop Craig$ scp /Users/Craig/Desktop/test.txt craig@192.168.0.10:/home/craig
+craig@192.168.0.10's password: 
+test.txt                                      100%   20     0.0KB/s   00:00 
+</pre>
+<p>To double check, switch to your Pi's terminal window and type the following command:</p>
+<pre>ls -la</pre>
+<p>You can see from my console that the file copied successfully!</p>
+<pre>
+craig@raspberrypi:~ $ ls -la
+total 28
+drwxr-xr-x 2 craig craig 4096 Nov 22 03:24 .
+drwxr-xr-x 4 root  root  4096 Nov 21 22:03 ..
+-rw------- 1 craig craig  589 Nov 22 02:05 .bash_history
+-rw-r--r-- 1 craig craig  220 Nov 21 22:03 .bash_logout
+-rw-r--r-- 1 craig craig 3512 Nov 21 22:03 .bashrc
+-rw-r--r-- 1 craig craig  675 Nov 21 22:03 .profile
+-rw-r--r-- 1 craig craig   20 Nov 22 03:24 test.txt
+</pre>
+
 
 
 
 ---
 
+
+---
+
 <h5>Some useful commandline commands for the Pi</h5>
+
+
+</pre>
+<p>Create a text file</p>
+<pre>
+nano your_file_name.extension
+<b>eg. nano test_file.py</b>
+</pre>
+<p>Create a directory</p>
+<pre>mkdir your_directory_name</pre>
+<p>Delete a file:</p>
+<pre>sudo rm file_to_delete.extension</pre>
+<p>Delete a folder and all its contents:</p>
+<pre>sudo rm -rf folder_to_delete</pre>
+
 <p>Shutdown your Pi:</p>
 <pre>sudo shutdown now</pre>
 <p>Restart your Pi:</p>
