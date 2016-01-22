@@ -186,12 +186,12 @@ drwxr-xr-x  32 Craig  staff        1088 Dec 15 00:12 demo
 <p>This will give you the present working directory for your Pi, which'll look something like this:</p>
 <pre>
 craig@raspberrypi:~ $ pwd
-/home/craig
+<b>/home/craig</b>
 </pre>
 <p>Switch back to the window and repeat the previous step.  My path looks like this:</p>
 <pre>
 Craigs-MacBook-Pro:Desktop Craig$ pwd
-/Users/Craig/Desktop
+<b>/Users/Craig/Desktop</b>
 </pre>
 <p>Now that we have both the source and destination paths, we can perform the copy.  To perform the copy, type the following command (substituting my file paths for your own): </p>
 <pre>
@@ -216,7 +216,7 @@ drwxr-xr-x 4 root  root  4096 Nov 21 22:03 ..
 -rw-r--r-- 1 craig craig  220 Nov 21 22:03 .bash_logout
 -rw-r--r-- 1 craig craig 3512 Nov 21 22:03 .bashrc
 -rw-r--r-- 1 craig craig  675 Nov 21 22:03 .profile
--rw-r--r-- 1 craig craig   20 Nov 22 03:24 test.txt
+<b>-rw-r--r-- 1 craig craig   20 Nov 22 03:24 test.txt</b>
 </pre>
 
 
